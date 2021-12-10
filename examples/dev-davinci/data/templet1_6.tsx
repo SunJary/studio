@@ -45,7 +45,7 @@ const data: TypeDataBase = {
                 color: "#ffffff",
                 fontSize: 36,
                 lineHeight: 54,
-                fontFamily: '',
+                fontFamily: 'SourceHan',
                 textAlign: 'left',// | 'center' | 'right',
             },
             operation: {

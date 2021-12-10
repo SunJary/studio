@@ -144,7 +144,7 @@ module.exports = {
       filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
-      template: 'examples/dev/index.html',
+      template: 'examples/dev-davinci/index.html',
       filename: 'index.html',
       inject: true,
     }),

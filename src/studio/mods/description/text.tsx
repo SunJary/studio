@@ -20,7 +20,7 @@ export const TextDescForm: React.FC<DescFormProps> = ({ onChange, elem }) => {
     { name: ['text'], value: elem.desc.text || '' },
     { name: ['color'], value: elem.desc.color || '' },
     { name: ['fontSize'], value: elem.desc.fontSize || 12 },
-    { name: ['fontFamily'], value: elem.desc.fontFamily || 'sans-serif' },
+    { name: ['fontFamily'], value: elem.desc.fontFamily || 'SourceHan' },
     { name: ['textAlign'], value: elem.desc.textAlign || 'center' },
     { name: ['lineHeight'], value: elem.desc.lineHeight || elem.desc.fontSize },
     { name: ['borderWidth'], value: elem.desc.borderWidth || 0 },
@@ -74,8 +74,7 @@ export const TextDescForm: React.FC<DescFormProps> = ({ onChange, elem }) => {
         <Col span="24">
           <Form.Item name="fontFamily" label="Font Family" >
             <Select style={{ width: 120 }} size="small">
-              <Option value="sans-serif">sans-serif</Option>
-              <Option value="monospace">monospace</Option>
+              <Option value="SourceHan">思源黑体</Option>
             </Select>
           </Form.Item>
         </Col>
@@ -129,7 +128,7 @@ export const TextDescForm: React.FC<DescFormProps> = ({ onChange, elem }) => {
           </Form.Item>
         </Col>
       </Row>
-  
+
       <Row>
         <Col span="24">
           <Form.Item
@@ -139,7 +138,7 @@ export const TextDescForm: React.FC<DescFormProps> = ({ onChange, elem }) => {
           </Form.Item>
         </Col>
       </Row>
-      
+
     </Form>
   )
 };
@@ -160,19 +159,19 @@ function parseFiledsData(fields: FieldData[]) {
       switch (item.name[0]) {
         case 'text': {
           if (idraw.is.text(item.value)) {
-            desc[item.name[0]] = item.value; 
+            desc[item.name[0]] = item.value;
           }
           break;
         }
         case 'fontSize': {
           if (idraw.is.fontSize(parseInt(item.value))) {
-            desc[item.name[0]] = parseInt(item.value); 
+            desc[item.name[0]] = parseInt(item.value);
           }
           break;
         }
         case 'lineHeight': {
           if (idraw.is.lineHeight(parseInt(item.value))) {
-            desc[item.name[0]] = parseInt(item.value); 
+            desc[item.name[0]] = parseInt(item.value);
           } else {
             // delete desc[item.name[0]];
             desc[item.name[0]] = '';
@@ -181,43 +180,43 @@ function parseFiledsData(fields: FieldData[]) {
         }
         case 'fontFamily': {
           if (idraw.is.fontFamily(item.value)) {
-            desc[item.name[0]] = item.value; 
+            desc[item.name[0]] = item.value;
           }
           break;
         }
         case 'textAlign': {
           if (idraw.is.textAlign(item.value)) {
-            desc[item.name[0]] = item.value; 
+            desc[item.name[0]] = item.value;
           }
           break;
         }
         case 'color': {
           if (idraw.is.color(item.value)) {
-            desc[item.name[0]] = item.value; 
+            desc[item.name[0]] = item.value;
           }
           break;
         }
         case 'bgColor': {
           if (idraw.is.color(item.value)) {
-            desc[item.name[0]] = item.value; 
+            desc[item.name[0]] = item.value;
           }
           break;
         }
         case 'borderColor': {
           if (idraw.is.color(item.value)) {
-            desc[item.name[0]] = item.value; 
+            desc[item.name[0]] = item.value;
           }
           break;
         }
         case 'borderRadius': {
           if (idraw.is.borderRadius(parseFloat(item.value))) {
-            desc[item.name[0]] = limitNum(parseFloat(item.value)); 
+            desc[item.name[0]] = limitNum(parseFloat(item.value));
           }
           break;
         }
         case 'borderWidth': {
           if (idraw.is.borderWidth(parseFloat(item.value))) {
-            desc[item.name[0]] = limitNum(parseFloat(item.value)); 
+            desc[item.name[0]] = limitNum(parseFloat(item.value));
           }
           break;
         }

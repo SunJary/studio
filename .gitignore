@@ -117,3 +117,4 @@ package-lock.json
 yarn.lock
 /.idea/
 /static/cover/
+/static/fonts/

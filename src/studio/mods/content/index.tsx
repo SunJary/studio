@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useEffect, useRef, useState, useContext, useCallback } from 'react';
 import iDraw from 'idraw';
 import { TypeElement, TypeDataBase, TypeData } from '@idraw/types';
-import { Layout } from 'antd'; 
+import { Layout } from 'antd';
 import eventHub from '../../util/event-hub';
 import { StudioContext } from './../../context';
 import { onDragOver } from './../../mods/global';
@@ -24,10 +24,10 @@ function StudioContent(props: TypeProps) {
   const context = useContext(StudioContext);
   const { data } = context;
   const { width, height } = props;
-  const mount = useRef(null); 
+  const mount = useRef(null);
   const [ textElem, setTextElem ] = useState<TypeElement<'text'>|null>(null);
   const [idrawObj, setIDrawObj] = useState<iDraw|null>(null)
-  
+
   useEffect(() => {
     const mountDiv = mount.current as HTMLDivElement;
     const idraw = new iDraw(mountDiv, {
@@ -45,6 +45,7 @@ function StudioContent(props: TypeProps) {
       }
     });
     setIDrawObj(idraw);
+    window.idraw = idraw;
 
     idraw.on('changeData', (data) => {
       eventHub.trigger('studioChangeData', data);
@@ -69,7 +70,7 @@ function StudioContent(props: TypeProps) {
         setTextElem(elem);
       }
     })
-    
+
     // studio event
     eventHub.on('studioUpdateData', (data: TypeDataBase|TypeData) => {
       idraw.setData(data, { triggerChangeEvent: true });
@@ -136,7 +137,7 @@ function StudioContent(props: TypeProps) {
     });
 
     if (data) {
-      idraw.setData(data, { 
+      idraw.setData(data, {
         triggerChangeEvent: true
       });
     }
