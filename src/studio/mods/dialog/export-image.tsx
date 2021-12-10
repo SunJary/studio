@@ -85,7 +85,7 @@ function ExportImage (props: { idraw: iDraw }) {
   const onChangeName = useCallback((e) => {
     setImageName(e.target.value || '');
   }, [])
-  
+
   return (
     <div className="idraw-studio-export-image-container">
       <div className="export-image-preview">
@@ -95,7 +95,7 @@ function ExportImage (props: { idraw: iDraw }) {
         <Row className="export-setting-field">
           <Col span={7} className="setting-field-text">Type: </Col>
           <Col span={17} className="setting-field-content">
-            <Select style={{ width: '100%' }} 
+            <Select style={{ width: '100%' }}
               options={imageTypeOptions}
               value={imageType}
               onChange={handleImageType}></Select>
@@ -105,7 +105,7 @@ function ExportImage (props: { idraw: iDraw }) {
         <Row className="export-setting-field">
           <Col span={7} className="setting-field-text">Quality: </Col>
           <Col span={17} className="setting-field-content">
-            <Select  style={{ width: '100%' }} 
+            <Select  style={{ width: '100%' }}
               options={imageQualityOptions}
               value={imageQuality}
               onChange={handleImageQuality}></Select>
@@ -123,10 +123,10 @@ function ExportImage (props: { idraw: iDraw }) {
           <Col span={12}>
             <Button onClick={() => {
               tempDialog.destroy();
-            }}>Cancel</Button>
+            }}>取消</Button>
           </Col>
           <Col span={12}>
-            <Button type="primary" onClick={onClickDownload}>Download</Button>
+            <Button type="primary" onClick={onClickDownload}>下载</Button>
           </Col>
         </Row>
 

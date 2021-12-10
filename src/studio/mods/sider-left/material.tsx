@@ -6,7 +6,7 @@ import { TypeMaterial } from '../../types';
 import { CustomSelector } from '../custom-selector';
 // import eventHub from './../../util/event-hub';
 import { generalDataList } from './data/general';
-import { iconDataList } from './data/icon';
+// import { iconDataList } from './data/icon';
 
 const { Panel } = Collapse;
 
@@ -34,9 +34,9 @@ export function Materials(props: TypeProps) {
         <Panel header="General" key="general" className="idraw-studio-siderleft-panel">
           <Selector dataList={generalDataList} />
         </Panel>
-        <Panel header="Icon" key="icon" className="idraw-studio-siderleft-panel">
+        {/* <Panel header="Icon" key="icon" className="idraw-studio-siderleft-panel">
           <Selector dataList={iconDataList} />
-        </Panel>
+        </Panel> */}
         {Array.isArray(props.customMaterials) && (
           <Panel header="Custom" key="custom" className="idraw-studio-siderleft-panel" >
             <CustomSelector
