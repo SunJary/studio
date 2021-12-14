@@ -29,7 +29,7 @@ const data: TypeDataBase = {
                 src: '/static/idraw/b30.png',
             },
             operation: {
-                lock: !1
+                lock: !0
             }
         },
         {
