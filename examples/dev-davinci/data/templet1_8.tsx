@@ -11,7 +11,7 @@ const data: TypeDataBase = {
             type: "image",
             angle: 0,
             desc: {
-                src: '/static/cover/6.jpg'
+                src: '/static/cover/8.jpg'
             },
             operation: {
                 lock: !0
