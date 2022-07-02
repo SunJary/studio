@@ -13,6 +13,7 @@ import templet1_11 from '../../data/templet1_11';
 import templet1_12 from '../../data/templet1_12';
 import templet1_13 from '../../data/templet1_13';
 import templet1_14 from '../../data/templet1_14';
+import templet1_15 from '../../data/templet1_15';
 
 import templet2_1 from '../../data/templet2_1';
 import templet2_2 from '../../data/templet2_2';
@@ -110,6 +111,12 @@ if (type == 1) {
     {
       name: '模板14',
       data: templet1_14,
+      width: 496,
+      height: 715
+    },
+    {
+      name: '模板15',
+      data: templet1_15,
       width: 496,
       height: 715
     },
