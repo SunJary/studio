@@ -22,6 +22,12 @@ import templet2_4 from '../../data/templet2_4';
 import templet2_5 from '../../data/templet2_5';
 import templet2_6 from '../../data/templet2_6';
 
+import templet3_1 from '../../data/templet3_1';
+import templet3_2 from '../../data/templet3_2';
+import templet3_3 from '../../data/templet3_3';
+import templet3_4 from '../../data/templet3_4';
+import templet3_5 from '../../data/templet3_5';
+
 const querystring = require('querystring')
 let param = querystring.parse(window.location.search.substr(1))
 
@@ -158,6 +164,39 @@ if (type == 1) {
       data: templet2_6,
       width: 750,
       height: 422
+    },
+  ];
+} else if (type == 3) {
+  templateList = [
+    {
+      name: '模板1',
+      data: templet3_1,
+      width: 496,
+      height: 716
+    },
+    {
+      name: '模板2',
+      data: templet3_2,
+      width: 496,
+      height: 716
+    },
+    {
+      name: '模板3',
+      data: templet3_3,
+      width: 496,
+      height: 716
+    },
+    {
+      name: '模板4',
+      data: templet3_4,
+      width: 496,
+      height: 716
+    },
+    {
+      name: '模板5',
+      data: templet3_5,
+      width: 496,
+      height: 716
     },
   ];
 } else {
